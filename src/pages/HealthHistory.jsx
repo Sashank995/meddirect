@@ -17,7 +17,7 @@ export default function HealthHistory() {
 
   // ✅ Fetch data from backend
   useEffect(() => {
-    fetch("http://localhost:5000/api/health-history") // <-- your backend URL
+    fetch("https://medirectbackend.onrender.com/api/health-history") // <-- your backend URL
       .then((res) => res.json())
       .then((data) => {
         setHealthRecords(data);

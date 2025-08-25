@@ -9,13 +9,13 @@ export default function Emergency() {
 
   // ✅ Fetch emergency contacts from backend
   useEffect(() => {
-    fetch("http://localhost:5000/api/emergency/contacts")
+    fetch("https://medirectbackend.onrender.com/api/emergency/contacts")
       .then((res) => res.json())
       .then((data) => setEmergencyContacts(data))
       .catch((err) => console.error("Error fetching contacts:", err));
 
     // ✅ Fetch medical ID from backend
-    fetch("http://localhost:5000/api/emergency/medical-id")
+    fetch("https://medirectbackend.onrender.com/api/emergency/medical-id")
       .then((res) => res.json())
       .then((data) => setMedicalId(data))
       .catch((err) => console.error("Error fetching medical ID:", err));
@@ -31,7 +31,7 @@ export default function Emergency() {
         setLocationLink(mapsUrl);
 
         // Send location to backend
-        fetch("http://localhost:5000/api/emergency/location", {
+        fetch("https://medirectbackend.onrender.com/api/emergency/location", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ latitude: lat, longitude: lng, link: mapsUrl }),
@@ -46,7 +46,7 @@ export default function Emergency() {
 
   // ✅ Panic button API call
   const triggerPanic = () => {
-    fetch("http://localhost:5000/api/emergency/panic", { method: "POST" })
+    fetch("https://medirectbackend.onrender.com/api/emergency/panic", { method: "POST" })
       .then(() => alert("🚨 Panic alert sent to your emergency contacts!"))
       .catch((err) => console.error("Error triggering panic:", err));
   };

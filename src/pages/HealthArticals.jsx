@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { BookOpen, HeartPulse, Loader2 } from "lucide-react";
 
 // Backend base URL (read from .env, fallback to localhost if not set)
-const API_BASE_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:5000";
+const API_BASE_URL = import.meta.env.VITE_BACKEND_URL || "https://medirectbackend.onrender.com";
 
 export default function HealthArticles() {
   const [articles, setArticles] = useState([]);

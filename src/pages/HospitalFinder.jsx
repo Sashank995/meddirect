@@ -11,7 +11,7 @@ export default function HospitalFinder() {
   useEffect(() => {
     const fetchHospitals = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/hospitals");
+        const response = await fetch("https://medirectbackend.onrender.com/api/hospitals");
         const data = await response.json();
         setHospitals(data);
       } catch (error) {

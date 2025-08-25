@@ -51,7 +51,7 @@ export default function Appointments() {
   const cancelAppointment = async (appt) => {
     if (window.confirm(`Cancel appointment with ${appt.doctor} on ${appt.date}?`)) {
       try {
-        await fetch(`http://localhost:5000/api/appointments/${appt.id}`, {
+        await fetch(`https://medirectbackend.onrender.com/api/appointments/${appt.id}`, {
           method: "DELETE",
         });
         setAppointments((prev) => prev.filter((a) => a.id !== appt.id));

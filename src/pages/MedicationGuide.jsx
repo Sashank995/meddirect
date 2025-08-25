@@ -129,7 +129,7 @@ export default function MedicationGuide() {
   useEffect(() => {
     const fetchMedications = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/medications");
+        const response = await fetch("https://medirectbackend.onrender.com/api/medications");
         const data = await response.json();
         setMedications(data);
       } catch (error) {
