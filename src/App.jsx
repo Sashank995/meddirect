@@ -73,6 +73,7 @@ import Emergency from "./pages/Emergency";
 import HealthArticals from "./pages/HealthArticals";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import HealthAdvice from "./pages/Health-service";
 import './App.css'
 export default function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -100,7 +101,10 @@ export default function App() {
            <Route path="/emergency" element={<Emergency />} /> 
           <Route path="/articles" element={<HealthArticals />} /> 
           <Route path="/about" element={<About />} />
+      
           <Route path="/contact" element={<Contact />} />
+          <Route path="/health-service" element={<HealthAdvice />} />
+          
         </Routes>
       </div>
     </Router>
